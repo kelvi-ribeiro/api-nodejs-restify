@@ -19,5 +19,9 @@
   "homepage": "https://github.com/kelvi-ribeiro/api-nodejs-restify#readme",
   "dependencies": {
     "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.21",
+    "@types/yargs": "^12.0.8"
   }
 }
