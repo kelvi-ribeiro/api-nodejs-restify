@@ -9,7 +9,7 @@ export class User {
     }
     static findById(id):Promise<any>{
         return new Promise(resolve =>{
-            resolve(users.find(user => user.id === id) || undefined)
+            resolve(users.find(user => user.id === id))
         })
     }
 }
