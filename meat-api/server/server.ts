@@ -21,6 +21,7 @@ export class Server{
                 });
                 
                 this.application.use(restify.plugins.queryParser());
+                this.application.use(restify.plugins.bodyParser());
 
                 for (const router of routers) {
                     router.applyRoutes(this.application)                    

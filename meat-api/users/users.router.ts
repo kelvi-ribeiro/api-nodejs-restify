@@ -1,6 +1,7 @@
 import {Router} from '../common/router';
 import * as restify from 'restify';
 import {User} from './users.model'
+import { response } from 'spdy';
 
 class UsersRouter extends Router{
     applyRoutes(application:restify.Server){
@@ -22,6 +23,18 @@ class UsersRouter extends Router{
             return next()
             })
         })
+    application.post('/users',(req, resp, next) => {
+        // Ao invés de atribuir  atributo por atributo, usando o construtor do Model
+        const user = new User(req.body) 
+        /* user.name = req.body.name
+        user.email = req.body.email */
+        user.save().then(user =>{
+            user.password = undefined
+            resp.json(user)
+            return next()
+        })
+    })
+    
     }
     
 } 
