@@ -8,7 +8,7 @@ class UsersRouter extends Router{
     constructor(){
         super()
         this.on('beforeRender',document=>{
-            document.password = undefined
+            if(document) document.password = undefined
             // delete document.password
         })
     }
