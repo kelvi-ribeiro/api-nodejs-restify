@@ -7,12 +7,24 @@ class UsersRouter extends ModelRouter<User>{
         super(User)
         this.on('beforeRender',document=>{
             if(document) document.password = undefined
+            
             // delete document.password
         })
     }
+    findByEmail = (req,resp,next)=>{
+        if(req.query.email){
+            User.find({email:req.query.email})
+            .then(this.renderAll(resp,next))
+            .catch(next)
+        }else{
+            next()
+        }
+    }
     applyRoutes(application:restify.Server){
 
-    application.get('/users',this.findAll)
+    application.get({path:'/users',version:'2.0.0'},[this.findByEmail,this.findAll])
+
+    application.get({path:'/users',version:'1.0.0'},this.findAll)
 
     application.get('/users/:id',[this.validateId,this.findById])
 
@@ -23,6 +35,7 @@ class UsersRouter extends ModelRouter<User>{
     application.patch('/users/:id',[this.validateId,this.update])
 
     application.del('/users/:id',[this.validateId,this.delete])
+    
 
     }
     
