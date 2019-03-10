@@ -56,7 +56,7 @@ test('post /users - nome obrigatorio', ()=>{
    Depois filtra-se por email na expectativa de retornar apenas
    o que tiver o email identico.
  */
-/* test('get /users - findByEmail', ()=>{
+test('get /users - findByEmail', ()=>{
   return request(address)
             .post('/users')
             .send({
@@ -74,7 +74,7 @@ test('post /users - nome obrigatorio', ()=>{
                        expect(response.body.items[0].email).toBe('usuario3@email.com')
              }).catch(fail)
 })
- */
+
 test('get /users/aaaaa - not found', ()=>{
   return request(address)
      .get('/users/aaaaa')
