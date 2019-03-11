@@ -2,6 +2,7 @@ import {ModelRouter} from '../common/model-router'
 import * as restify from 'restify'
 import * as mongoose from 'mongoose'
 import {Review} from './reviews.model'
+import {authorize} from '../security/authz.handler'
 
 class ReviewsRouter extends ModelRouter<Review>{
     constructor(){
@@ -26,7 +27,7 @@ class ReviewsRouter extends ModelRouter<Review>{
     
         application.get(`/${this.basePath}/:id`,[this.validateId,this.findById])
     
-        application.post(`/${this.basePath}`,this.save)    
+        application.post(`/${this.basePath}`,[authorize('user'),this.save])    
         
         }
 }

@@ -4,7 +4,8 @@ import {Router} from '../common/router'
 import * as mongoose from 'mongoose'
 import {mergePatchBodyParser} from './merge-patch.parser'
 import {handleError} from './error-handler'
-import {tokenParser} from '../security/token-parser'
+import { tokenParser } from '../security/token.parser';
+
 export class Server{
     application:restify.Server
 
