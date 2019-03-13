@@ -13,7 +13,7 @@ export const authenticate: restify.RequestHandler = (req, resp, next)=>{
         //3rd
         const token = jwt.sign({sub: user.email, iss: 'meat-api'},
                   environment.security.apiSecret)
-        resp.json({name: user.name, email: user.email, accessToken: token})
+        resp.json({name: user.name, email: user.email, accessToken: token,tokenType:'Bearer'})
         return next(false)
       } else {
         return next(new NotAuthorizedError('Invalid Credentials'))
