@@ -4,8 +4,9 @@ const app = restify.createServer()
 app.use(restify.plugins.queryParser())
 
 app.get('/',(req, resp, next)=>{
-    for(let i = 0; i<1e8; i++){}
-        resp.json({pid:process.pid,echo:req.query})
+        setTimeout(() => {
+            resp.json({pid:process.pid,echo:req.query})
+        }, 500);
     
 })
 

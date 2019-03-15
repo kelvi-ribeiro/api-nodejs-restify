@@ -28,10 +28,11 @@ O PM2 é uma ferramenta open source completa para o gerenciamento e deploy de ap
 | `pm2 start {archivePath}` | Inicia a aplicação, caso não seja passado nenhum parâmetro para o nome da aplicação, o nome do arquivo que incia a aplicação é levado em consideração para as aplicações que estão no registro do pm2. |
 | `pm2 start {archivePath} --name={appName}` | Inicia a aplicação passando um nome definido que irá ficar nos registros do pm2. |
 | `pm2 start {archivePath} -i {instanceNumber}` | Inicia a aplicação passando em cluster, ou seja, o número passado no parâmetro, será igual o número o pm2 de instâncias o que pm2 irá cirar. Um ponto interresante desse parâmetro, é que ao passar o número "0", o pm2 dois tem a inteligência de contar quantas cpu's existem na máquina, baseado nesse número, cria-se uma instância para cpu. |
-| `pm2 start {AppName}` | Inicia a aplicação passando um appName, funcionará se a aplicação estiver nos registro do pm2, para isso, é necessária que ela tenha sido Iniciada usada o comando acima previamente. |
-| `pm2 stop {AppName}` |  Para a aplicação passada por parâmetro. |
-| `pm2 delete {AppName}` | Para e Deleta aplicação dos registros do pm2. |
+| `pm2 start {appName}` | Inicia a aplicação passando um appName, funcionará se a aplicação estiver nos registro do pm2, para isso, é necessária que ela tenha sido Iniciada usada o comando acima previamente. |
+| `pm2 stop {appName}` |  Para a aplicação passada por parâmetro. |
+| `pm2 delete {appName}` | Para e Deleta aplicação dos registros do pm2. |
 | `pm2 ls` | Lista as aplicações que estão no registro do pm2. |
+| `pm2 scale {appName} {wishedInstance}` | Serve para manipular as instância levantadas em cluster, por exemplo, se tivermos 4 instância em cluster de uma aplição rodando e executar o comando passando o parâmetro {wishedInstance} como 1, o pm2 irá demover 3 instâncias e só sobrará uma intância da aplicação. Ou seja, podemos controlar o número de intância, tanto como aumentando ou subindo. |
 
 ## loadtest
 
