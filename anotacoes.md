@@ -33,6 +33,10 @@ O PM2 é uma ferramenta open source completa para o gerenciamento e deploy de ap
 | `pm2 delete {appName}` | Para e Deleta aplicação dos registros do pm2. |
 | `pm2 ls` | Lista as aplicações que estão no registro do pm2. |
 | `pm2 scale {appName} {wishedInstance}` | Serve para manipular as instância levantadas em cluster, por exemplo, se tivermos 4 instância em cluster de uma aplição rodando e executar o comando passando o parâmetro {wishedInstance} como 1, o pm2 irá demover 3 instâncias e só sobrará uma intância da aplicação. Ou seja, podemos controlar o número de intância, tanto como aumentando ou subindo. |
+| `pm2 echosystem simple ` | O pm2 cria um arquivo de configuração padrão, passando esse parâmetro simple, é criado um arquivo com configurações mais simples, diferente de não passando essa flag. |
+|`pm2 start ecosystem.config.js`| Serve para iniciar a aplicação a partir de um arquivo de configuração do pm2, só é necessário apontar para o arquivo de configuração para que isso seja possível.|
+|`pm2 reload ecosystem.config.js --env production`| Serve para recarregar uma aplicação a partir do arquivo de configuração do pm2, passando a env como production.|
+
 
 ## loadtest
 
