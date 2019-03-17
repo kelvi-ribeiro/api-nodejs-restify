@@ -4,5 +4,9 @@ export const  environment = {
     security:{
         saltRounds:process.env.SALT_ROUNDS || 10,   
         apiSecret:process.env.API_SECRET || 'meat-api-secret'
+    },
+    log:{
+        level:process.env.LOG_LEVEL || 'debug',
+        name:'meat-api-logger'
     }
 }

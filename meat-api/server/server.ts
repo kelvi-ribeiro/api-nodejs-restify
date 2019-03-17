@@ -1,5 +1,6 @@
 import * as restify from 'restify';
 import {environment} from '../common/environment'
+import {logger} from '../common/logger'
 import {Router} from '../common/router'
 import * as mongoose from 'mongoose'
 import {mergePatchBodyParser} from './merge-patch.parser'
@@ -20,7 +21,8 @@ export class Server{
             try{
                 this.application = restify.createServer({
                     name:'meat-api',
-                    version:'1.0.0'
+                    version:'1.0.0',
+                    log:logger
                 });
                 
                 this.application.use(restify.plugins.queryParser())
