@@ -1,10 +1,9 @@
 import 'jest'
-
-import * as mongoose from 'mongoose'
 import * as request from 'supertest'
-import {environment} from '../common/environment'
 
-let address: string = (<any>global).address
+
+const address: string = (<any>global).address
+const auth: string = (<any>global).auth
 
 test('get /restaurants', ()=>{
   return request(address)
@@ -32,6 +31,7 @@ test('get /restaurants/aaaaa - not found', ()=>{
 test('post /restaurants', ()=>{
   return request(address)
             .post('/restaurants')
+            .set('Authorization',auth)
             .send({
               name: 'Burger House',
               menu: [{name: "Coke", price: 5}]

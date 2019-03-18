@@ -12,7 +12,8 @@
   "jest": {
     "verbose": true,
     "globals": {
-      "address": "http://localhost:3001"
+      "address": "http://localhost:3001",
+      "auth":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOiIxNTE2MjM5MDIyIn0.WsRwKBkV35rlOY7tpGdpW6tNQWNXFdEAR6z9Cn9BbeQ"
     },
     "testEnvironment": "node",
     "transform": {
