@@ -1,0 +1,656 @@
+{
+	"info": {
+		"_postman_id": "5cd0f1cd-1a68-4621-9680-a7a279de4890",
+		"name": "Cursos Udemy - MEAT-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/users",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/users/5c69e1ba0ae70a42fda1ba37",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"5c69e1ba0ae70a42fda1ba37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save a User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Maitê\",\n\t\"email\":\"maite@teste.com\",\n\t\"password\":\"princesinha\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/users",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "{{token_type}} {{access_token}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update completely a User by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5c6d5cc01cf8b82ea0404f71\",\n\t\"name\":\"Kelvi Ribeiro\",\n\t\"email\":\"ribeiro@teste.com\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/users/5c6d5cc01cf8b82ea0404f71",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"5c6d5cc01cf8b82ea0404f71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update partially a User by ID",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/merge-patch+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"262517kaka\",\n    \"profiles\":[\"admin\"]\n    \n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/users/5c6d5cc01cf8b82ea0404f71",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"5c6d5cc01cf8b82ea0404f71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/users/5c73fdcb14f14d37748141d2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"5c73fdcb14f14d37748141d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-version",
+								"value": "1.0.0",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/users?email=kelvi.ribeiro@gmail.com",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "kelvi.ribeiro@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate a User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ef693882-1dd5-421a-9ec5-e901dc1963ce",
+								"exec": [
+									"if(responseCode.code === 200){",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setGlobalVariable(\"token_type\", jsonData.tokenType);",
+									"postman.setGlobalVariable(\"access_token\", jsonData.accessToken);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"kelvi.ribeiro@gmail.com\",\n\t\"password\":\"262517kaka\"\n}\n"
+						},
+						"url": {
+							"raw": "{{api_url}}/users/authenticate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "Get All Restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/restaurants",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Restaurant by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/restaurants/5c7f51a3eb274d6b410dd5f2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"restaurants",
+								"5c7f51a3eb274d6b410dd5f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save a Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Hamburgueria do X-RATÃO\"\n\t\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/restaurants",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update completely a Restaurant by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"5c6d5cc01cf8b82ea0404f71\",\n\t\"name\":\"Kelvi Ribeiro\",\n\t\"email\":\"ribeiro@teste.com\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/restaurants/5c6d5cc01cf8b82ea0404f71",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"restaurants",
+								"5c6d5cc01cf8b82ea0404f71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update partially a Restaurant by ID",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/merge-patch+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Kelvi Martins\"\n    \n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/restaurants/5c6d5cc01cf8b82ea0404f71",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"restaurants",
+								"5c6d5cc01cf8b82ea0404f71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Restaurant by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/restaurants/5c7f8d92d4758413b782e407",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"restaurants",
+								"5c7f8d92d4758413b782e407"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save a Array Menu by Restaurant ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\"name\":\"Pork Burger\",\"price\":22},\n\t{\"name\":\"Coca Cola\",\"price\":5}\n]"
+						},
+						"url": {
+							"raw": "{{api_url}}/restaurants/5c7f51a3eb274d6b410dd5f2/menu",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"restaurants",
+								"5c7f51a3eb274d6b410dd5f2",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET a Array Menu by Restaurant ID Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/restaurants/5c7f51a3eb274d6b410dd5f2/menu",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"restaurants",
+								"5c7f51a3eb274d6b410dd5f2",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Get All Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/reviews?_page=4",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "_page",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Review by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/reviews/5c7f5a4b8c665e731087d293",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"reviews",
+								"5c7f5a4b8c665e731087d293"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save a Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token_type}} {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"date\":\"2019-03-06\",\n\t\"rating\":5,\n\t\"comments\":\"Muito Boooom\",\n\t\"restaurant\":\"5c7f51a3eb274d6b410dd5f2\",\n\t\"user\":\"5c69e1ba0ae70a42fda1ba37\"\n\t\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/reviews",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0e8fa25c-9e94-4646-b6fd-7b9d07f102df",
+				"type": "text/javascript",
+				"exec": [
+					"postman.setGlobalVariable(\"token_type\", \"Bearer\");",
+					"postman.setGlobalVariable(\"api_url\", \"http://localhost:3000\");",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a32cf3ea-a7e0-40b3-97d7-46c5a4db0339",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
