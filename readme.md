@@ -1,6 +1,6 @@
 # Curso de NodeJS com Restify, TypeScript, Mongoose e Jest
 
-Projeto de API de Restaurante  usando o NodeJS, ministrada pelo Instrutor  [Tarso Bessa](hhttps://www.udemy.com/user/tarso-bessa/) - [Link do Curso](https://www.udemy.com/nodejs-rest-pt/). Foi feito uma collection no Postman com todas os requests da aplicação, é só clicar no botão abaixo para obter a collection.
+Projeto de API de Restaurante  usando o NodeJS, ministrada pelo Instrutor  [Tarso Bessa](https://www.udemy.com/user/tarso-bessa/) - [Link do Curso](https://www.udemy.com/nodejs-rest-pt/). Foi feito uma collection no Postman com todas os requests da aplicação, é só clicar no botão abaixo para obter a collection.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6386c40b20374966ddb2)
 
