@@ -1,4 +1,4 @@
-# Curso de NodeJS com Restify, TypeScript, Mongoose e jest
+# Curso de NodeJS com Restify, TypeScript, Mongoose e Jest
 
 Projeto de API de Restaurante  usando o NodeJS, ministrada pelo Instrutor  [Tarso Bessa](hhttps://www.udemy.com/user/tarso-bessa/) - [Link do Curso](https://www.udemy.com/nodejs-rest-pt/). Foi feito uma collection no Postman com todas os requests da aplicação, é só clicar no botão abaixo para obter a collection.
 
@@ -11,7 +11,7 @@ Projeto de API de Restaurante  usando o NodeJS, ministrada pelo Instrutor  [Tars
 * [Mongoose/4.13.9] - Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.
 * [Restify/6.3.4] - restify is a framework, utilizing connect style middleware for building REST APIs.
 * [Restify Errors/5.0.0] - A collection of HTTP and REST Error constructors.
-* [TypeScript] - is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS.
+* [TypeScript/2.6.2] - is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS.
 
 ## Comandos do NodeJs
 
